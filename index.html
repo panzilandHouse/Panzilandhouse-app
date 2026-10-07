@@ -2,87 +2,84 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PanzilandHouse</title>
+<title>PanzilandHouse - Bukavu</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>
-body{background:#0f1720;color:#fff;font-family:system-ui}
-.card{background:#1e2a36;border-radius:20px}
-.rdc{height:6px;background:linear-gradient(90deg,#00A1DF 33%,#FFD100 33%,#FFD100 66%,#EF3340 66%)}
-</style>
+<style>body{background:#0f1720;color:#fff;font-family:system-ui}.card{background:#1e2a36;border-radius:20px}.rdc{height:6px;background:linear-gradient(90deg,#00A1DF 33%,#FFD100 33%,#FFD100 66%,#EF3340 66%)}</style>
 </head>
 <body>
-<!-- HEADER -->
-<div class="flex items-center justify-between p-4 bg-[#111d29]">
-<div class="flex items-center gap-3">
-<div class="w-14 h-14 bg-[#1e2a36] rounded-2xl flex items-center justify-center text-2xl">🐺</div>
-<div><h1 class="font-extrabold text-xl">PanzilandHouse</h1><p class="text-[#FFD100] text-[13px] font-bold">Wolves of Truth Community</p></div>
-</div>
-<div class="flex gap-4 text-xl"><i class="fa fa-search"></i><i class="fa fa-bell relative"><span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span></i><i class="fa fa-bars"></i></div>
-</div>
 <div class="rdc"></div>
 
-<!-- WELCOME -->
-<div class="m-3 card p-0 overflow-hidden">
-<div class="p-5 flex justify-between items-center bg-[#162233]">
-<div><h2 class="font-extrabold text-[22px]">Welcome to the Pack</h2><p class="text-gray-400 text-[13px] mt-1">Uniting truth-seekers • 2.4k Members • Active now</p></div>
+<div class="flex items-center justify-between p-4 bg-[#111d29]">
+<div class="flex items-center gap-3"><div class="w-14 h-14 bg-[#1e2a36] rounded-2xl flex items-center justify-center text-2xl">🐺</div><div><h1 class="font-extrabold text-xl">PanzilandHouse</h1><p class="text-[#FFD100] text-[13px] font-bold">Wolves of Truth Community • Bukavu 🇨🇩</p></div></div>
+<div class="flex gap-4 text-xl"><i class="fa fa-search"></i><i class="fa fa-bell"></i></div>
+</div>
+
+<!-- WELCOME BUKAVU -->
+<div class="m-3 card p-5 bg-[#162233] flex justify-between items-center">
+<div><h2 class="font-extrabold text-[22px]">Welcome to the Pack</h2><p class="text-gray-400 text-[13px] mt-1">Bukavu • 2.4k Membres • Wolves of Truth<br>Par Emmanuel Lukogo</p></div>
 <div class="w-14 h-14 rounded-xl bg-[#00A1DF] flex items-center justify-center text-2xl border-2 border-yellow-400">🇨🇩</div>
 </div>
-<div class="p-3 bg-[#111d29] grid grid-cols-3 gap-3">
-<a href="mailto:panzilandelbash@gmail.com" class="border-2 border-[#4a8cff] rounded-full py-3 text-center bg-[#1a2a3a]"><div class="text-xl">📧</div><div class="text-[11px] mt-1 font-bold">Gmail</div></a>
-<a href="https://www.facebook.com/share/1a6k6pZJ2L/?mibextid=wwXIfr" target="_blank" class="border-2 border-[#FFD100] rounded-full py-3 text-center bg-[#1a2a3a]"><div class="text-xl">📘</div><div class="text-[11px] mt-1 font-bold">Facebook</div></a>
-<a href="tel:+243991396995" class="border-2 border-[#ff4a4a] rounded-full py-3 text-center bg-[#1a2a3a]"><div class="text-xl">📞</div><div class="text-[11px] mt-1 font-bold">Phone</div></a>
+
+<!-- CONTACTS BUKAVU - APPEL UNIQUEMENT -->
+<div class="px-3 grid grid-cols-3 gap-2">
+<a href="mailto:panzilandelbash@gmail.com" class="border-2 border-[#4a8cff] rounded-full py-3 text-center bg-[#1a2a3a]"><div>📧</div><div class="text-[10px] mt-1 font-bold">Gmail</div></a>
+<a href="https://www.facebook.com/share/1a6k6pZJ2L/?mibextid=wwXIfr" target="_blank" class="border-2 border-[#FFD100] rounded-full py-3 text-center bg-[#1a2a3a]"><div>📘</div><div class="text-[10px] mt-1 font-bold">Panziland House</div></a>
+<a href="tel:+243991396995" class="border-2 border-[#ff4a4a] rounded-full py-3 text-center bg-[#2a1a1a]"><div>📞</div><div class="text-[10px] mt-1 font-bold">Appel</div></a>
 </div>
-<div class="px-3 pb-3 bg-[#111d29] flex gap-2">
-<a href="https://wa.me/243991396995" class="flex-1 bg-green-600 rounded-full py-2 text-center font-bold text-xs">WhatsApp +243 991 396 995</a>
-<a href="mailto:panzilandelbash@gmail.com" class="flex-1 bg-[#2a3d55] rounded-full py-2 text-center font-bold text-xs">panzilandelbash@gmail.com</a>
+
+<div class="px-3 mt-3 flex gap-2">
+<a href="tel:+243991396995" class="flex-1 bg-[#EF3340] rounded-full py-3 text-center font-bold text-sm"><i class="fa fa-phone"></i> Appeler +243 991 396 995</a>
+<button onclick="document.getElementById('insc').classList.remove('hidden')" class="flex-1 bg-[#FFD100] text-black rounded-full py-3 text-center font-bold text-sm">✍️ S'inscrire</button>
+</div>
+
+<!-- INSCRIPTION FORM (caché) -->
+<div id="insc" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+<div class="card p-6 w-full max-w-sm">
+<h3 class="font-bold text-xl mb-1">Rejoindre la Meute 🐺</h3><p class="text-xs text-gray-400 mb-4">Bukavu • Panziland House</p>
+<input id="nom" placeholder="Ton nom complet" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm">
+<input id="email" placeholder="Ton Gmail" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm">
+<input id="phone" placeholder="Ton numéro d'appel" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm">
+<button onclick="inscrire()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Confirmer Inscription</button>
+<button onclick="document.getElementById('insc').classList.add('hidden')" class="w-full mt-2 text-gray-400 text-sm">Fermer</button>
 </div>
 </div>
 
 <!-- FEED -->
-<div class="px-4">
-<div class="flex justify-between items-center my-4"><h2 class="font-extrabold text-[22px]">Community Feed</h2><button onclick="alert('Bientôt! Poste ton Mind')" class="bg-[#FFD100] text-black px-4 py-2 rounded-xl font-bold text-sm">New Post +</button></div>
+<div class="px-4 mt-6">
+<div class="flex justify-between items-center mb-4"><h2 class="font-extrabold text-[20px]">Community Feed</h2><button class="bg-[#FFD100] text-black px-4 py-2 rounded-xl font-bold text-sm">New Post +</button></div>
 
-<div class="card p-4 mb-4">
-<div class="flex gap-3"><div class="w-10 h-10 rounded-full bg-[#00A1DF] flex items-center justify-center">🐺</div><div><div class="font-bold">Emmanuel Lukogo • Fondateur</div><div class="text-xs text-gray-400">Maintenant • Panziland House • Goma RDC</div></div></div>
-<p class="mt-3 text-[14px]">Just finished our discussion on truth & resilience. Remember: a wolf alone is weak, the pack is strong. 🇨🇩 #PanzilandHouse #WolvesOfTruth</p>
-<div class="mt-3 h-44 bg-gradient-to-br from-[#1a2a3a] to-black rounded-2xl flex items-center justify-center relative overflow-hidden"><div class="text-6xl">🔥🐺🌲</div><div class="absolute bottom-2 left-3 text-[10px] bg-black/60 px-2 py-1 rounded">Photo • Rassemblement de la Meute</div></div>
+<div class="card p-4 mb-20">
+<div class="flex gap-3"><div class="w-10 h-10 rounded-full bg-[#00A1DF] flex items-center justify-center">🐺</div><div><div class="font-bold">Emmanuel Lukogo • Fondateur</div><div class="text-xs text-gray-400">Bukavu • Panziland House • RDC</div></div></div>
+<p class="mt-3 text-[14px]">Un loup seul est faible, la meute est forte. Depuis Bukavu, on construit la vérité ensemble. 🇨🇩 #PanzilandHouse</p>
 <div class="flex justify-between mt-4 text-sm">
-<button onclick="likeMe(this)" class="bg-[#c94040] px-5 py-2 rounded-full font-bold"><span class="heart">❤️</span> <span class="count">127</span> Like</button>
-<button class="text-gray-300"><i class="far fa-comment"></i> 24 Comments</button>
-<button onclick="navigator.share?navigator.share({title:'PanzilandHouse',url:location.href}):alert('Lien copié: '+location.href)" class="text-gray-300"><i class="fa fa-share"></i> Share</button>
+<button onclick="likeMe(this)" class="bg-[#c94040] px-5 py-2 rounded-full font-bold">❤️ <span class="count">127</span> Like</button>
+<button class="text-gray-300">💬 24 Commentaires</button>
+<button class="text-gray-300">↗️ Partager</button>
 </div>
-</div>
-
-<div class="card p-4 mb-24">
-<div class="flex gap-3"><div class="w-10 h-10 rounded-full bg-[#8b2a2a] flex items-center justify-center">🐺</div><div><div class="font-bold">Panziland House • Page</div><div class="text-xs text-gray-400">5h ago • Organizer • Facebook</div></div></div>
-<p class="mt-3 text-[14px] font-bold">Event tomorrow: Community Night — Join us for strategy talk & 18:00 Kinshasa | Community Center</p>
-<div class="mt-3 bg-[#FFD100] text-black p-3 rounded-xl flex items-center gap-3 w-[200px]"><i class="fa fa-calendar text-xl"></i><div class="text-xs font-bold">Tomorrow • 18:00<br>Going: 58</div></div>
-<div class="flex justify-between mt-4 text-sm">
-<button onclick="likeMe(this)" class="px-5 py-2 rounded-full"><i class="far fa-heart"></i> <span class="count">42</span> Like</button>
-<button class="text-gray-300"><i class="far fa-comment"></i> 12 Comments</button>
-<button class="text-gray-300"><i class="fa fa-share"></i> Share</button>
+<div class="mt-4 pt-3 border-t border-gray-700 text-[11px] text-gray-400">
+📧 panzilandelbash@gmail.com<br>📘 Panziland House (Page) • Emmanuel Lukogo<br>📞 +243 991 396 995 (Appel direct) • Bukavu, RDC
 </div>
 </div>
 </div>
 
-<!-- BOTTOM NAV -->
 <div class="fixed bottom-0 w-full bg-[#111d29] flex justify-around py-3 border-t border-[#1e2a36]">
-<div class="text-center text-[#FFD100] border-t-2 border-[#FFD100] pt-1 -mt-3"><div class="text-xl"><i class="fa fa-home"></i></div><div class="text-[11px]">Home</div></div>
-<div class="text-center text-gray-500"><div class="text-xl"><i class="fa fa-paw"></i></div><div class="text-[11px]">Community</div></div>
-<div class="text-center text-gray-500"><div class="text-xl"><i class="fa fa-calendar"></i></div><div class="text-[11px]">Events</div></div>
-<div class="text-center text-gray-500"><div class="text-xl"><i class="fa fa-comment-dots"></i></div><div class="text-[11px]">Chat</div></div>
-<div class="text-center text-gray-500"><div class="text-xl"><i class="fa fa-user-circle"></i></div><div class="text-[11px]">Profile</div></div>
+<div class="text-center text-[#FFD100]"><i class="fa fa-home"></i><div class="text-[11px]">Home</div></div>
+<div class="text-center text-gray-500"><i class="fa fa-paw"></i><div class="text-[11px]">Meute</div></div>
+<div class="text-center text-gray-500"><i class="fa fa-book"></i><div class="text-[11px]">Livres</div></div>
+<div class="text-center text-gray-500"><i class="fa fa-user"></i><div class="text-[11px]">Profil</div></div>
 </div>
 
 <script>
-function likeMe(btn){
- let c = btn.querySelector('.count');
- let n = parseInt(c.innerText)+1;
- c.innerText = n;
- btn.classList.add('bg-[#c94040]'); btn.classList.remove('text-gray-300');
- if(navigator.vibrate) navigator.vibrate(50);
+function likeMe(b){let c=b.querySelector('.count');c.innerText=parseInt(c.innerText)+1; if(navigator.vibrate) navigator.vibrate(50);}
+function inscrire(){
+let n=document.getElementById('nom').value, e=document.getElementById('email').value;
+if(!n||!e){alert('Remplis nom et Gmail');return;}
+alert('Bienvenue dans la Meute, '+n+'! 🐺\nOn te contactera sur '+e+'\n\nTu es inscrit depuis Bukavu!');
+// Envoi email automatique à toi
+window.location.href='mailto:panzilandelbash@gmail.com?subject=Nouvelle Inscription PanzilandHouse - '+n+'&body=Nom:'+n+'%0AEmail:'+e+'%0APhone:'+document.getElementById('phone').value+'%0AVille:Bukavu';
+document.getElementById('insc').classList.add('hidden');
 }
 </script>
 </body>
-  </html>
+                                                                                                                                                                                                        </html>
