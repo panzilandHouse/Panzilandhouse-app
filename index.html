@@ -10,12 +10,12 @@
 <body>
 <div class="rdc"></div>
 <div class="flex items-center justify-between p-4 bg-[#111d29]">
-<div class="flex items-center gap-3"><div class="w-14 h-14 bg-[#1e2a36] rounded-2xl flex items-center justify-center text-2xl">🐺</div><div><h1 class="font-extrabold text-xl">PanzilandHouse</h1><p class="text-[#FFD100] text-[12px] font-bold">Wolves of Truth • Bukavu 🇨🇩</p></div></div>
+<div class="flex items-center gap-3"><div class="w-14 h-14 bg-[#1e2a36] rounded-2xl flex items-center justify-center text-2xl">🐺</div><div><h1 class="font-extrabold text-xl">PanzilandHouse</h1><p class="text-[#FFD100] text-[12px] font-bold">Wolves of Truth • Bukavu 🇨🇩 • Admin: El Bash</p></div></div>
 <div class="flex gap-4 text-lg"><i class="fa fa-search"></i><i class="fa fa-bell"></i></div>
 </div>
 
 <div class="m-3 card p-5 bg-[#162233] flex justify-between items-center">
-<div><h2 class="font-extrabold text-[22px]">Welcome to the Pack</h2><p class="text-gray-400 text-[13px] mt-1">Uniting truth-seekers • <span id="memberCount" class="text-[#FFD100] font-bold">0</span> Membres • Active now<br>Par Emmanuel Lukogo • Fondateur</p></div>
+<div><h2 class="font-extrabold text-[22px]">Welcome to the Pack</h2><p class="text-gray-400 text-[13px] mt-1"><span id="memberCount" class="text-[#FFD100] font-bold">0</span> Membres • Bukavu • Livres Officiels<br>Par Emmanuel Lukogo • Fondateur</p></div>
 <div class="w-14 h-14 rounded-xl bg-[#00A1DF] flex items-center justify-center text-2xl">🇨🇩</div>
 </div>
 
@@ -30,44 +30,38 @@
 </div>
 
 <div id="homeSection" class="px-4 mt-4">
-<div class="flex justify-between items-center mb-4"><h2 class="font-extrabold text-lg">Community Feed</h2><button onclick="openPost()" class="bg-[#FFD100] text-black px-4 py-2 rounded-xl font-bold text-xs">New Post +</button></div>
+<div class="flex justify-between items-center mb-4"><h2 class="font-extrabold text-lg">Community Feed</h2><button onclick="checkAdmin()" class="bg-[#FFD100] text-black px-4 py-2 rounded-xl font-bold text-xs">New Post + 🔒</button></div>
 <div id="feed"></div>
 </div>
 
 <div id="meuteSection" class="hidden px-4 mt-4"><h2 class="font-bold text-lg mb-3">Meute • Membres (<span id="memberCount2">0</span>)</h2><div id="memberList" class="card p-4 text-sm text-gray-400">Aucun membre encore.</div></div>
 
 <div id="livresSection" class="hidden px-4 mt-4 mb-20">
-<h2 class="font-bold text-lg mb-3">Mes Livres 📚</h2>
+<h2 class="font-bold text-lg mb-3">Mes Livres Officiels 📚</h2>
+<p class="text-[11px] text-gray-400 mb-3">Seul l'Admin Emmanuel Lukogo peut publier ici. Les membres peuvent télécharger.</p>
 <div id="livresList"></div>
 </div>
 
 <div id="profilSection" class="hidden px-4 mt-4 mb-24">
 <h2 class="font-bold text-lg mb-3">Profil Fondateur</h2>
-<div class="card p-5"><div class="w-20 h-20 bg-[#00A1DF] rounded-full flex items-center justify-center text-3xl mx-auto">🐺</div><h3 class="text-center font-bold mt-3">Emmanuel Lukogo</h3><p class="text-center text-xs text-gray-400">Fondateur • Bukavu, RDC</p><div class="mt-4 text-xs leading-6">📧 panzilandelbash@gmail.com<br>📘 Page: Panziland House<br>📞 +243 991 396 995<br>📍 Bukavu, Sud-Kivu, RDC 🇨🇩</div><div class="mt-4 grid grid-cols-3 gap-2 text-center"><div class="card p-3"><div id="statMembers" class="font-bold text-lg">0</div><div class="text-[10px]">Membres</div></div><div class="card p-3"><div id="statPosts" class="font-bold text-lg">0</div><div class="text-[10px]">Posts</div></div><div class="card p-3"><div id="statLikes" class="font-bold text-lg">0</div><div class="text-[10px]">J'aimes</div></div></div></div>
+<div class="card p-5"><div class="w-20 h-20 bg-[#00A1DF] rounded-full flex items-center justify-center text-3xl mx-auto">🐺</div><h3 class="text-center font-bold mt-3">Emmanuel Lukogo</h3><p class="text-center text-xs text-gray-400">Fondateur • Bukavu, RDC • Admin</p><div class="mt-4 text-xs leading-6">📧 panzilandelbash@gmail.com<br>📘 Page: Panziland House<br>📞 +243 991 396 995<br>📍 Bukavu, Sud-Kivu, RDC 🇨🇩<br>🔒 Code Admin: panzilandHouse@2026 (secret)</div><div class="mt-4 grid grid-cols-3 gap-2 text-center"><div class="card p-3"><div id="statMembers" class="font-bold text-lg">0</div><div class="text-[10px]">Membres</div></div><div class="card p-3"><div id="statPosts" class="font-bold text-lg">0</div><div class="text-[10px]">Livres</div></div><div class="card p-3"><div id="statLikes" class="font-bold text-lg">0</div><div class="text-[10px]">J'aimes</div></div></div></div>
 </div>
 
-<!-- MODAL INSCRIPTION -->
 <div id="insModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"><div class="card p-6 w-full max-w-sm"><h3 class="font-bold text-lg">Rejoindre la Meute 🐺</h3><input id="nom" placeholder="Ton nom" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm mt-3"><input id="email" placeholder="Ton Gmail" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><input id="phone" placeholder="Numéro d'appel" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm"><button onclick="doIns()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Confirmer</button><button onclick="closeIns()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button></div></div>
 
-<!-- MODAL NEW POST AVEC PHOTO + PDF -->
 <div id="postModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 overflow-y-auto">
 <div class="card p-6 w-full max-w-sm my-8">
-<h3 class="font-bold text-lg">New Post + 📚</h3>
-<p class="text-xs text-gray-400 mb-3">Publie ton livre avec photo + PDF</p>
-
-<select id="postType" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><option value="Mind">Mind / Texte</option><option value="Livre">Livre 📚</option><option value="Photo">Photo 📸</option></select>
-<input id="postTitle" placeholder="Titre du livre / post" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm">
-<textarea id="postContent" placeholder="Description du livre..." class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm h-16"></textarea>
-
-<label class="text-xs text-[#FFD100] font-bold mt-2">1. Photo de couverture du livre :</label>
+<h3 class="font-bold text-lg">New Post Admin 🔒</h3>
+<p class="text-xs text-green-400 mb-2">✅ Accès Admin autorisé - Code: panzilandHouse@2026</p>
+<select id="postType" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><option value="Livre">Livre 📚</option><option value="Mind">Mind / Texte</option><option value="Photo">Photo 📸</option></select>
+<input id="postTitle" placeholder="Titre du livre" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm">
+<textarea id="postContent" placeholder="Description..." class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm h-16"></textarea>
+<label class="text-xs text-[#FFD100] font-bold">1. Photo de couverture :</label>
 <input type="file" id="postImage" accept="image/*" class="w-full p-2 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-xs">
 <div id="preview" class="hidden mb-2"><img id="previewImg" class="cover"></div>
-
-<label class="text-xs text-[#00A1DF] font-bold">2. Lien PDF / Document (Google Drive, etc) :</label>
-<input id="postPdf" placeholder="Colle le lien de ton PDF ici (https://...)" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-1 text-sm">
-<p class="text-[10px] text-gray-500 mb-3">Astuce: Mets ton PDF sur Google Drive > Partager > Copie le lien et colle-le ici</p>
-
-<button onclick="doPost()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Publier avec Photo + PDF</button>
+<label class="text-xs text-[#00A1DF] font-bold">2. Lien PDF / Document :</label>
+<input id="postPdf" placeholder="https://drive.google.com/..." class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm">
+<button onclick="doPost()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Publier comme Admin</button>
 <button onclick="closePost()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button>
 </div>
 </div>
@@ -80,18 +74,19 @@
 </div>
 
 <script>
+const ADMIN_CODE = "panzilandHouse@2026";
 let members = JSON.parse(localStorage.getItem('ph_members')||'[]');
 let posts = JSON.parse(localStorage.getItem('ph_posts')||'[]');
 let totalLikes = parseInt(localStorage.getItem('ph_likes')||'0');
 let tempImage = '';
-
 document.getElementById('postImage').addEventListener('change', function(e){
  let file=e.target.files[0]; if(!file) return;
- let reader=new FileReader();
- reader.onload=function(ev){ tempImage=ev.target.result; document.getElementById('previewImg').src=tempImage; document.getElementById('preview').classList.remove('hidden'); };
- reader.readAsDataURL(file);
+ let reader=new FileReader(); reader.onload=function(ev){ tempImage=ev.target.result; document.getElementById('previewImg').src=tempImage; document.getElementById('preview').classList.remove('hidden'); }; reader.readAsDataURL(file);
 });
-
+function checkAdmin(){
+ let code=prompt('🔒 Zone Admin - Seul Emmanuel Lukogo peut publier.\n\nEntre ton CODE SECRET ADMIN:');
+ if(code===ADMIN_CODE){ openPost(); } else if(code!==null){ alert('❌ Code incorrect! Seul le fondateur peut publier des livres.\n\nLes membres peuvent seulement lire et télécharger.'); }
+}
 function save(){localStorage.setItem('ph_members',JSON.stringify(members));localStorage.setItem('ph_posts',JSON.stringify(posts));localStorage.setItem('ph_likes',totalLikes); renderAll();}
 function renderAll(){
  document.getElementById('memberCount').innerText=members.length;
@@ -99,11 +94,11 @@ function renderAll(){
  document.getElementById('statMembers').innerText=members.length;
  document.getElementById('statPosts').innerText=posts.length;
  document.getElementById('statLikes').innerText=totalLikes;
- document.getElementById('memberList').innerHTML=members.length?members.map(m=>'<div class="border-b border-gray-700 py-2">🐺 <b>'+m.nom+'</b> - '+m.email+'</div>').join(''):'Aucun membre encore.';
- let base = [{type:'Mind',title:'La vérité se construit ensemble',content:'Chaque jour depuis Bukavu, on renforce la confiance du groupe. Un loup seul est faible, la meute est forte. 🇨🇩',likes:42,comments:12,image:'',pdf:''}].concat(posts);
+ document.getElementById('memberList').innerHTML=members.length?members.map(m=>'<div class="border-b border-gray-700 py-2">🐺 <b>'+m.nom+'</b> - '+m.email+'</div>').join(''):'Aucun membre encore. Sois le premier!';
+ let base = [{type:'Mind',title:'Bienvenue à PanzilandHouse Bukavu',content:'Ici tu trouveras les livres officiels du fondateur Emmanuel Lukogo. Clique Livres pour télécharger. Un loup seul est faible, la meute est forte. 🇨🇩',likes:42,comments:12,image:'',pdf:''}].concat(posts);
  document.getElementById('feed').innerHTML = base.map(p=>`
  <div class="card p-4 mb-3">
- <div class="flex gap-2"><div class="w-9 h-9 bg-blue-500 rounded-full flex items-center justify-center text-xs">🐺</div><div><div class="font-bold text-sm">Emmanuel Lukogo • ${p.type}</div><div class="text-[11px] text-gray-400">Bukavu • Maintenant</div></div></div>
+ <div class="flex gap-2"><div class="w-9 h-9 bg-blue-500 rounded-full flex items-center justify-center text-xs">🐺</div><div><div class="font-bold text-sm">Emmanuel Lukogo • ${p.type} • Officiel</div><div class="text-[11px] text-gray-400">Bukavu • Admin</div></div></div>
  <div class="mt-3"><div class="font-bold text-sm">${p.title}</div><div class="text-[13px] text-gray-300 mt-1">${p.content}</div></div>
  ${p.image?`<img src="${p.image}" class="cover mt-3">`:''}
  ${p.pdf?`<a href="${p.pdf}" target="_blank" class="block mt-3 bg-[#00A1DF] text-white text-center py-3 rounded-xl font-bold text-xs"><i class="fa fa-download"></i> 📥 Télécharger le PDF / Document</a>`:''}
@@ -118,19 +113,13 @@ function renderAll(){
  ${p.image?`<img src="${p.image}" class="cover mb-3">`:''}
  <b>📚 ${p.title}</b><br><span class="text-xs text-gray-300">${p.content}</span>
  ${p.pdf?`<a href="${p.pdf}" target="_blank" class="block mt-3 bg-[#FFD100] text-black text-center py-3 rounded-xl font-bold text-xs">📥 Télécharger PDF</a>`:''}
- </div>`).join('')||'<div class="text-xs text-gray-500">Aucun livre encore. Clique New Post + et ajoute photo + PDF</div>';
+ </div>`).join('')||'<div class="text-xs text-gray-500">Aucun livre officiel encore. L\'admin va publier bientôt.</div>';
 }
 function showTab(t){['home','meute','livres','profil'].forEach(x=>{document.getElementById(x+'Section').classList.add('hidden');document.getElementById('tab-'+x).classList.remove('tab-active');}); document.getElementById(t+'Section').classList.remove('hidden'); document.getElementById('tab-'+t).classList.add('tab-active');}
 function openIns(){document.getElementById('insModal').classList.remove('hidden')} function closeIns(){document.getElementById('insModal').classList.add('hidden')}
 function openPost(){document.getElementById('postModal').classList.remove('hidden')} function closePost(){document.getElementById('postModal').classList.add('hidden'); tempImage=''; document.getElementById('preview').classList.add('hidden');}
-function doIns(){let n=document.getElementById('nom').value, e=document.getElementById('email').value, p=document.getElementById('phone').value; if(!n||!e){alert('Nom et Gmail obligatoires');return;} members.push({nom:n,email:e,phone:p}); save(); closeIns(); alert('Bienvenue, '+n+'! Tu es #'+members.length);}
-function doPost(){
- let t=document.getElementById('postType').value, ti=document.getElementById('postTitle').value, c=document.getElementById('postContent').value, pdf=document.getElementById('postPdf').value;
- if(!ti||!c){alert('Titre et contenu obligatoires');return;}
- posts.unshift({type:t,title:ti,content:c,likes:0,comments:0,image:tempImage,pdf:pdf});
- document.getElementById('postTitle').value=''; document.getElementById('postContent').value=''; document.getElementById('postPdf').value=''; document.getElementById('postImage').value=''; tempImage='';
- save(); closePost(); showTab('home');
-}
+function doIns(){let n=document.getElementById('nom').value, e=document.getElementById('email').value, p=document.getElementById('phone').value; if(!n||!e){alert('Nom et Gmail obligatoires');return;} members.push({nom:n,email:e,phone:p}); save(); closeIns(); alert('Bienvenue, '+n+'! Tu es membre #'+members.length+' 🐺');}
+function doPost(){let t=document.getElementById('postType').value, ti=document.getElementById('postTitle').value, c=document.getElementById('postContent').value, pdf=document.getElementById('postPdf').value; if(!ti||!c){alert('Titre et contenu obligatoires');return;} posts.unshift({type:t,title:ti,content:c,likes:0,comments:0,image:tempImage,pdf:pdf}); document.getElementById('postTitle').value=''; document.getElementById('postContent').value=''; document.getElementById('postPdf').value=''; document.getElementById('postImage').value=''; tempImage=''; save(); closePost(); showTab('home');}
 renderAll();
 </script>
 </body>
