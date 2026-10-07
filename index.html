@@ -5,7 +5,7 @@
 <title>PanzilandHouse - Bukavu</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<style>body{background:#0f1720;color:#fff;font-family:system-ui}.card{background:#1e2a36;border-radius:20px}.rdc{height:6px;background:linear-gradient(90deg,#00A1DF 33%,#FFD100 33%,#FFD100 66%,#EF3340 66%)}.tab-active{color:#FFD100!important;border-top:2px solid #FFD100}</style>
+<style>body{background:#0f1720;color:#fff;font-family:system-ui}.card{background:#1e2a36;border-radius:20px}.rdc{height:6px;background:linear-gradient(90deg,#00A1DF 33%,#FFD100 33%,#FFD100 66%,#EF3340 66%)}.tab-active{color:#FFD100!important;border-top:2px solid #FFD100}img.cover{width:100%;border-radius:12px;max-height:250px;object-fit:cover}</style>
 </head>
 <body>
 <div class="rdc"></div>
@@ -14,13 +14,11 @@
 <div class="flex gap-4 text-lg"><i class="fa fa-search"></i><i class="fa fa-bell"></i></div>
 </div>
 
-<!-- WELCOME CORRIGÉ - COMMENCE A 0 -->
 <div class="m-3 card p-5 bg-[#162233] flex justify-between items-center">
 <div><h2 class="font-extrabold text-[22px]">Welcome to the Pack</h2><p class="text-gray-400 text-[13px] mt-1">Uniting truth-seekers • <span id="memberCount" class="text-[#FFD100] font-bold">0</span> Membres • Active now<br>Par Emmanuel Lukogo • Fondateur</p></div>
 <div class="w-14 h-14 rounded-xl bg-[#00A1DF] flex items-center justify-center text-2xl">🇨🇩</div>
 </div>
 
-<!-- CONTACTS -->
 <div class="px-3 grid grid-cols-3 gap-2">
 <a href="mailto:panzilandelbash@gmail.com" class="border border-blue-400 rounded-full py-3 text-center bg-[#1a2a3a] text-xs">📧 Gmail</a>
 <a href="https://www.facebook.com/share/1a6k6pZJ2L/" target="_blank" class="border border-yellow-400 rounded-full py-3 text-center bg-[#1a2a3a] text-xs">📘 Facebook</a>
@@ -31,39 +29,49 @@
 <button onclick="openIns()" class="flex-1 bg-[#FFD100] text-black rounded-full py-2.5 font-bold text-xs">✍️ S'inscrire</button>
 </div>
 
-<!-- SECTIONS -->
 <div id="homeSection" class="px-4 mt-4">
 <div class="flex justify-between items-center mb-4"><h2 class="font-extrabold text-lg">Community Feed</h2><button onclick="openPost()" class="bg-[#FFD100] text-black px-4 py-2 rounded-xl font-bold text-xs">New Post +</button></div>
 <div id="feed"></div>
 </div>
 
-<div id="meuteSection" class="hidden px-4 mt-4">
-<h2 class="font-bold text-lg mb-3">Meute • Membres (<span id="memberCount2">0</span>)</h2>
-<div id="memberList" class="card p-4 text-sm text-gray-400">Aucun membre encore. Sois le premier à t'inscrire!</div>
-</div>
+<div id="meuteSection" class="hidden px-4 mt-4"><h2 class="font-bold text-lg mb-3">Meute • Membres (<span id="memberCount2">0</span>)</h2><div id="memberList" class="card p-4 text-sm text-gray-400">Aucun membre encore.</div></div>
 
-<div id="livresSection" class="hidden px-4 mt-4">
+<div id="livresSection" class="hidden px-4 mt-4 mb-20">
 <h2 class="font-bold text-lg mb-3">Mes Livres 📚</h2>
-<div class="card p-4 mb-3"><p class="font-bold">Bientôt : Tes livres ici</p><p class="text-xs text-gray-400 mt-1">Chaque fois que tu cliques New Post + et choisis Livre, il apparaîtra ici avec J'aime et Partage.</p></div>
 <div id="livresList"></div>
 </div>
 
 <div id="profilSection" class="hidden px-4 mt-4 mb-24">
 <h2 class="font-bold text-lg mb-3">Profil Fondateur</h2>
-<div class="card p-5"><div class="w-20 h-20 bg-[#00A1DF] rounded-full flex items-center justify-center text-3xl mx-auto">🐺</div><h3 class="text-center font-bold mt-3">Emmanuel Lukogo</h3><p class="text-center text-xs text-gray-400">Fondateur • Bukavu, RDC</p><div class="mt-4 text-xs leading-6">📧 panzilandelbash@gmail.com<br>📘 Page: Panziland House<br>📞 +243 991 396 995 (Appel direct)<br>📍 Bukavu, Sud-Kivu, RDC 🇨🇩</div><div class="mt-4 grid grid-cols-3 gap-2 text-center"><div class="card p-3"><div id="statMembers" class="font-bold text-lg">0</div><div class="text-[10px]">Membres</div></div><div class="card p-3"><div id="statPosts" class="font-bold text-lg">0</div><div class="text-[10px]">Posts</div></div><div class="card p-3"><div id="statLikes" class="font-bold text-lg">0</div><div class="text-[10px]">J'aimes</div></div></div></div>
+<div class="card p-5"><div class="w-20 h-20 bg-[#00A1DF] rounded-full flex items-center justify-center text-3xl mx-auto">🐺</div><h3 class="text-center font-bold mt-3">Emmanuel Lukogo</h3><p class="text-center text-xs text-gray-400">Fondateur • Bukavu, RDC</p><div class="mt-4 text-xs leading-6">📧 panzilandelbash@gmail.com<br>📘 Page: Panziland House<br>📞 +243 991 396 995<br>📍 Bukavu, Sud-Kivu, RDC 🇨🇩</div><div class="mt-4 grid grid-cols-3 gap-2 text-center"><div class="card p-3"><div id="statMembers" class="font-bold text-lg">0</div><div class="text-[10px]">Membres</div></div><div class="card p-3"><div id="statPosts" class="font-bold text-lg">0</div><div class="text-[10px]">Posts</div></div><div class="card p-3"><div id="statLikes" class="font-bold text-lg">0</div><div class="text-[10px]">J'aimes</div></div></div></div>
 </div>
 
 <!-- MODAL INSCRIPTION -->
-<div id="insModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-<div class="card p-6 w-full max-w-sm"><h3 class="font-bold text-lg">Rejoindre la Meute 🐺</h3><p class="text-xs text-gray-400 mb-3">Bukavu • Panziland House</p><input id="nom" placeholder="Ton nom" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><input id="email" placeholder="Ton Gmail" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><input id="phone" placeholder="Numéro d'appel" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm"><button onclick="doIns()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Confirmer</button><button onclick="closeIns()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button></div>
+<div id="insModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"><div class="card p-6 w-full max-w-sm"><h3 class="font-bold text-lg">Rejoindre la Meute 🐺</h3><input id="nom" placeholder="Ton nom" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm mt-3"><input id="email" placeholder="Ton Gmail" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><input id="phone" placeholder="Numéro d'appel" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm"><button onclick="doIns()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Confirmer</button><button onclick="closeIns()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button></div></div>
+
+<!-- MODAL NEW POST AVEC PHOTO + PDF -->
+<div id="postModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 overflow-y-auto">
+<div class="card p-6 w-full max-w-sm my-8">
+<h3 class="font-bold text-lg">New Post + 📚</h3>
+<p class="text-xs text-gray-400 mb-3">Publie ton livre avec photo + PDF</p>
+
+<select id="postType" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><option value="Mind">Mind / Texte</option><option value="Livre">Livre 📚</option><option value="Photo">Photo 📸</option></select>
+<input id="postTitle" placeholder="Titre du livre / post" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm">
+<textarea id="postContent" placeholder="Description du livre..." class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm h-16"></textarea>
+
+<label class="text-xs text-[#FFD100] font-bold mt-2">1. Photo de couverture du livre :</label>
+<input type="file" id="postImage" accept="image/*" class="w-full p-2 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-xs">
+<div id="preview" class="hidden mb-2"><img id="previewImg" class="cover"></div>
+
+<label class="text-xs text-[#00A1DF] font-bold">2. Lien PDF / Document (Google Drive, etc) :</label>
+<input id="postPdf" placeholder="Colle le lien de ton PDF ici (https://...)" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-1 text-sm">
+<p class="text-[10px] text-gray-500 mb-3">Astuce: Mets ton PDF sur Google Drive > Partager > Copie le lien et colle-le ici</p>
+
+<button onclick="doPost()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Publier avec Photo + PDF</button>
+<button onclick="closePost()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button>
+</div>
 </div>
 
-<!-- MODAL NEW POST -->
-<div id="postModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-<div class="card p-6 w-full max-w-sm"><h3 class="font-bold text-lg">New Post +</h3><p class="text-xs text-gray-400 mb-3">Publier livre, photo, texte</p><select id="postType" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><option value="Mind">Mind / Texte</option><option value="Livre">Livre 📚</option><option value="Photo">Photo 📸</option></select><input id="postTitle" placeholder="Titre" class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-2 text-sm"><textarea id="postContent" placeholder="Contenu..." class="w-full p-3 rounded-xl bg-[#0f1720] border border-gray-700 mb-3 text-sm h-20"></textarea><button onclick="doPost()" class="w-full bg-[#FFD100] text-black py-3 rounded-xl font-bold">Publier</button><button onclick="closePost()" class="w-full mt-2 text-gray-400 text-sm">Fermer</button></div>
-</div>
-
-<!-- BOTTOM NAV CLIQUABLE -->
 <div class="fixed bottom-0 w-full bg-[#111d29] flex justify-around py-3 border-t border-[#1e2a36] text-gray-500">
 <button onclick="showTab('home')" id="tab-home" class="tab-active text-center"><i class="fa fa-home"></i><div class="text-[11px]">Home</div></button>
 <button onclick="showTab('meute')" id="tab-meute" class="text-center"><i class="fa fa-paw"></i><div class="text-[11px]">Meute</div></button>
@@ -75,45 +83,55 @@
 let members = JSON.parse(localStorage.getItem('ph_members')||'[]');
 let posts = JSON.parse(localStorage.getItem('ph_posts')||'[]');
 let totalLikes = parseInt(localStorage.getItem('ph_likes')||'0');
+let tempImage = '';
+
+document.getElementById('postImage').addEventListener('change', function(e){
+ let file=e.target.files[0]; if(!file) return;
+ let reader=new FileReader();
+ reader.onload=function(ev){ tempImage=ev.target.result; document.getElementById('previewImg').src=tempImage; document.getElementById('preview').classList.remove('hidden'); };
+ reader.readAsDataURL(file);
+});
 
 function save(){localStorage.setItem('ph_members',JSON.stringify(members));localStorage.setItem('ph_posts',JSON.stringify(posts));localStorage.setItem('ph_likes',totalLikes); renderAll();}
-
 function renderAll(){
  document.getElementById('memberCount').innerText=members.length;
  document.getElementById('memberCount2').innerText=members.length;
  document.getElementById('statMembers').innerText=members.length;
  document.getElementById('statPosts').innerText=posts.length;
  document.getElementById('statLikes').innerText=totalLikes;
- let ml=document.getElementById('memberList'); if(members.length>0){ml.innerHTML=members.map(m=>'<div class="border-b border-gray-700 py-2">🐺 <b>'+m.nom+'</b> - '+m.email+'</div>').join('');}
- let feed=document.getElementById('feed'); let base = [{type:'Mind',title:'La vérité se construit ensemble',content:'Chaque jour depuis Bukavu, on renforce la confiance du groupe. Un loup seul est faible, la meute est forte. 🇨🇩',likes:42,comments:12}].concat(posts);
- feed.innerHTML = base.map((p,i)=>`
+ document.getElementById('memberList').innerHTML=members.length?members.map(m=>'<div class="border-b border-gray-700 py-2">🐺 <b>'+m.nom+'</b> - '+m.email+'</div>').join(''):'Aucun membre encore.';
+ let base = [{type:'Mind',title:'La vérité se construit ensemble',content:'Chaque jour depuis Bukavu, on renforce la confiance du groupe. Un loup seul est faible, la meute est forte. 🇨🇩',likes:42,comments:12,image:'',pdf:''}].concat(posts);
+ document.getElementById('feed').innerHTML = base.map(p=>`
  <div class="card p-4 mb-3">
  <div class="flex gap-2"><div class="w-9 h-9 bg-blue-500 rounded-full flex items-center justify-center text-xs">🐺</div><div><div class="font-bold text-sm">Emmanuel Lukogo • ${p.type}</div><div class="text-[11px] text-gray-400">Bukavu • Maintenant</div></div></div>
  <div class="mt-3"><div class="font-bold text-sm">${p.title}</div><div class="text-[13px] text-gray-300 mt-1">${p.content}</div></div>
+ ${p.image?`<img src="${p.image}" class="cover mt-3">`:''}
+ ${p.pdf?`<a href="${p.pdf}" target="_blank" class="block mt-3 bg-[#00A1DF] text-white text-center py-3 rounded-xl font-bold text-xs"><i class="fa fa-download"></i> 📥 Télécharger le PDF / Document</a>`:''}
  <div class="flex justify-between mt-4 text-xs">
  <button onclick="this.querySelector('.c').innerText=parseInt(this.querySelector('.c').innerText)+1;totalLikes++;save();if(navigator.vibrate)navigator.vibrate(30);" class="bg-[#1a2a3a] px-4 py-2 rounded-full">❤️ <span class="c">${p.likes||0}</span> J'aime</button>
  <button onclick="let com=prompt('Ton commentaire:');if(com){this.innerText='💬 '+(parseInt(this.innerText.match(/\\d+/)||0)+1)+' Com';}" class="px-2">💬 ${p.comments||0} Com</button>
- <button onclick="navigator.clipboard?navigator.clipboard.writeText(location.href):null;alert('Lien copié! Partage: '+location.href)" class="px-2">↗️ Partage</button>
+ <button onclick="navigator.clipboard.writeText('${p.pdf||location.href}');alert('Lien copié!')" class="px-2">↗️ Partage</button>
  </div>
  </div>`).join('');
- let ll=document.getElementById('livresList'); ll.innerHTML=posts.filter(p=>p.type=='Livre').map(p=>'<div class="card p-4 mb-2">📚 <b>'+p.title+'</b><br><span class="text-xs">'+p.content+'</span></div>').join('')||'<div class="text-xs text-gray-500">Aucun livre encore. Clique New Post +</div>';
+ document.getElementById('livresList').innerHTML=posts.filter(p=>p.type=='Livre').map(p=>`
+ <div class="card p-4 mb-3">
+ ${p.image?`<img src="${p.image}" class="cover mb-3">`:''}
+ <b>📚 ${p.title}</b><br><span class="text-xs text-gray-300">${p.content}</span>
+ ${p.pdf?`<a href="${p.pdf}" target="_blank" class="block mt-3 bg-[#FFD100] text-black text-center py-3 rounded-xl font-bold text-xs">📥 Télécharger PDF</a>`:''}
+ </div>`).join('')||'<div class="text-xs text-gray-500">Aucun livre encore. Clique New Post + et ajoute photo + PDF</div>';
 }
 function showTab(t){['home','meute','livres','profil'].forEach(x=>{document.getElementById(x+'Section').classList.add('hidden');document.getElementById('tab-'+x).classList.remove('tab-active');}); document.getElementById(t+'Section').classList.remove('hidden'); document.getElementById('tab-'+t).classList.add('tab-active');}
 function openIns(){document.getElementById('insModal').classList.remove('hidden')} function closeIns(){document.getElementById('insModal').classList.add('hidden')}
-function openPost(){document.getElementById('postModal').classList.remove('hidden')} function closePost(){document.getElementById('postModal').classList.add('hidden')}
-function doIns(){
- let n=document.getElementById('nom').value, e=document.getElementById('email').value, p=document.getElementById('phone').value;
- if(!n||!e){alert('Nom et Gmail obligatoires');return;}
- members.push({nom:n,email:e,phone:p,date:new Date().toLocaleDateString()}); save(); closeIns();
- alert('Bienvenue dans la Meute, '+n+'! 🐺\nTu es le membre #'+members.length+' depuis Bukavu!\nOn te contactera sur '+e);
- window.location.href='mailto:panzilandelbash@gmail.com?subject=Nouveau Membre #'+members.length+' - '+n+'&body=Nom:'+n+'%0AEmail:'+e+'%0APhone:'+p+'%0ATotal membres:'+members.length;
-}
+function openPost(){document.getElementById('postModal').classList.remove('hidden')} function closePost(){document.getElementById('postModal').classList.add('hidden'); tempImage=''; document.getElementById('preview').classList.add('hidden');}
+function doIns(){let n=document.getElementById('nom').value, e=document.getElementById('email').value, p=document.getElementById('phone').value; if(!n||!e){alert('Nom et Gmail obligatoires');return;} members.push({nom:n,email:e,phone:p}); save(); closeIns(); alert('Bienvenue, '+n+'! Tu es #'+members.length);}
 function doPost(){
- let t=document.getElementById('postType').value, ti=document.getElementById('postTitle').value, c=document.getElementById('postContent').value;
+ let t=document.getElementById('postType').value, ti=document.getElementById('postTitle').value, c=document.getElementById('postContent').value, pdf=document.getElementById('postPdf').value;
  if(!ti||!c){alert('Titre et contenu obligatoires');return;}
- posts.unshift({type:t,title:ti,content:c,likes:0,comments:0}); save(); closePost(); showTab('home');
+ posts.unshift({type:t,title:ti,content:c,likes:0,comments:0,image:tempImage,pdf:pdf});
+ document.getElementById('postTitle').value=''; document.getElementById('postContent').value=''; document.getElementById('postPdf').value=''; document.getElementById('postImage').value=''; tempImage='';
+ save(); closePost(); showTab('home');
 }
 renderAll();
 </script>
 </body>
-                                                                                                                                                                                                                                                                     </html>
+ </html>
